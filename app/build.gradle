@@ -5,7 +5,7 @@ android {
         release {
             keyAlias 'HelloWorld'
             keyPassword 'prueba'
-            storeFile file('C:/Apps_Arquitectura/HelloWorld/app/helloworld.jks')
+            storeFile file('../../app/helloworld.jks')
             storePassword 'prueba'
         }
     }
