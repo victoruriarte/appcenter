@@ -1,21 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        release {
-            keyAlias 'HelloWorld'
-            keyPassword 'prueba'
-            storeFile file('../../app/helloworld.jks')
-            storePassword 'prueba'
-        }
-    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.vur.helloworld"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 102
-        versionName "1.0.2"
+        versionCode 103
+        versionName "1.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -27,7 +19,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
@@ -36,4 +28,5 @@ dependencies {
     def appCenterSdkVersion = '1.4.0'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+
 }
